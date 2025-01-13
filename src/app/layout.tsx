@@ -63,7 +63,7 @@ export default function RootLayout({
                   href="https://github.com/tovacinni/research-website-template"
                   className="underline hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors"
                 >
-                  research-website-template
+                  template
                 </a>
               </p>
             </div>
