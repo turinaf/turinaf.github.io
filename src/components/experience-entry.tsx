@@ -1,5 +1,5 @@
 import { Experience } from "@/data/experience";
-
+import ReactMarkdown from 'react-markdown'
 export function ExperienceEntry({ experience }: { experience: Experience }) {
   return (
     <div className="grid grid-cols-4 gap-x-2">
@@ -31,9 +31,9 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
           </p>
         )}
         {experience.description && (
-          <p className="text-sm text-zinc-600 leading-relaxed mt-2">
-            {experience.description}
-          </p>
+          <div className="text-sm text-zinc-600 leading-relaxed mt-2 markdown-content">
+          <ReactMarkdown>{experience.description}</ReactMarkdown>
+        </div>
         )}
       </div>
     </div>

@@ -18,7 +18,7 @@ export const publicationData: Publication[] = [
     conference: "ICASSP",
     title: "Sagalee: An Open Source Automatic Speech Recognitioin Dataset for Oromo language",
     authors: "Turi Abu, Shi Ying, Thomas Fang Zheng, Dong Wang",
-    paperUrl: "https://arxiv.org/abs/2409.15476",
+    paperUrl: "https://github.com/turinaf/sagalee",
     codeUrl: "https://github.com/turinaf/sagalee",
     //bibtex: "https://arxiv.org/abs/2409.15476.bib",
     // tldr: "Created speech dataset for Oromo language and established baseline models",

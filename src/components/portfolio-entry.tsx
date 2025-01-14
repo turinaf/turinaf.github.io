@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Portfolio } from "@/data/portfolio";
-
+import ReactMarkdown from 'react-markdown'
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
   return (
     <div className="flex flex-col sm:flex-row gap-6">
@@ -73,9 +73,9 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
             </a>
           )}
         </div>
-        <p className="text-sm text-zinc-600 mb-4 mt-4 italic">
-          {portfolio.description}
-        </p>
+        <div className="text-sm text-zinc-600  mb-4 mt-4 italic markdown-content">
+          <ReactMarkdown>{portfolio.description}</ReactMarkdown>
+        </div>
       </div>
     </div>
   );

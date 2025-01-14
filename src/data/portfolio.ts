@@ -10,19 +10,25 @@ export interface Portfolio {
 export const portfolioData: Portfolio[] = [
   // Example entry
   {
-    title: "Finetuning LLM for grammatical error correction",
+    title: "Finetuning LLM for Grammatical Error Correction (GEC)",
     description:
-      "Built something similar to Grammarly using finetuned LLM",
+      "Finetuned LLM for GEC and Developed GEC app. Key features include:\n" +
+      "* Fine-tuned T5 Flan-based models on JFLEG dataset\n" +
+      "* Built a REST API service with Flask\n" +
+      "* Designed an intuitive React frontend with real-time correction suggestions",
     technologies: ["Python", "PyTorch", "Flask", "React"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/grammarly.png",
     codeUrl: "https://github.com/turinaf/gec-ml",
   },
   {
-    title: "CodeDing - Semantic Code Search engine",
+    title: "CodeDig - Semantic Code Search Engine",
     description:
-      "Index code segments to enable to search semantically through code bases.",
-    technologies: ["Python", "LLM", "flask", "document indexing"],
+      "Built semantic code search engine that understands code context and functionality. Features include:\n\n" +
+      "* Used ChatGLM API to generate semantic descriptions of code segments, enabling natural language queries\n" +
+      "* Indexed code segments using whoosh library\n" +
+      "* Developoed demo app using Flask \n",
+    technologies: ["Python", "LLM", "flask", "Document indexing"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/code_search.png",
     codeUrl: "https://github.com/turinaf/codedig",
