@@ -10,12 +10,21 @@ export interface Portfolio {
 export const portfolioData: Portfolio[] = [
   // Example entry
   {
-    title: "Mobile application for Speech data collection",
+    title: "Mobile Application for Speech Data Collection",
     description:
       "* Developed android application for Automatic Speech Recognition data colllection using Flutter and firebase",
     technologies: ["Flutter", "Firebase", "Android"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/app.png",
+    codeUrl: "https://github.com/turinaf/sagalee",
+  },
+  {
+    title: "Local Retrieval Augmented Generation (RAG) Using Ollama",
+    description:
+      "* Built a local RAG using open source llama model for question answering task",
+    technologies: ["Docker", "Ollama", "Flask", "RAG"],
+    // projectUrl: "https://project-demo.com",
+    imageUrl: "/images/rag.png",
     codeUrl: "https://github.com/turinaf/sagalee",
   },
   {
