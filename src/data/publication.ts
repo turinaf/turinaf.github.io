@@ -22,7 +22,7 @@ export const publicationData: Publication[] = [
     codeUrl: "https://github.com/turinaf/sagalee",
     //bibtex: "https://arxiv.org/abs/2409.15476.bib",
     // tldr: "Created speech dataset for Oromo language and established baseline models",
-    imageUrl: "/images/app.png",
+    imageUrl: "/images/data.png",
     // award: "🏆 Best Paper Award",
     // if you have an image in public/images, you can use it like this:
     // imageUrl: "/images/publication-image.jpg"

@@ -10,13 +10,19 @@ export interface Portfolio {
 export const portfolioData: Portfolio[] = [
   // Example entry
   {
+    title: "Mobile application for Speech data collection",
+    description:
+      "* Developed android application for Automatic Speech Recognition data colllection using Flutter and firebase",
+    technologies: ["Flutter", "Firebase", "Android"],
+    // projectUrl: "https://project-demo.com",
+    imageUrl: "/images/app.png",
+    codeUrl: "https://github.com/turinaf/sagalee",
+  },
+  {
     title: "Finetuning LLM for Grammatical Error Correction (GEC)",
     description:
-      "Finetuned LLM for GEC and Developed GEC app. Key features include:\n" +
-      "* Fine-tuned T5 Flan-based models on JFLEG dataset\n" +
-      "* Built a REST API service with Flask\n" +
-      "* Designed an intuitive React frontend with real-time correction suggestions",
-    technologies: ["Python", "PyTorch", "Flask", "React"],
+      "* Fine-tuned T5 Flan-based model on JFLEG dataset for GEC task, and built Grammarly like website for demo\n",
+    technologies: ["Python", "PyTorch", "Flask", "React", "LLM"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/grammarly.png",
     codeUrl: "https://github.com/turinaf/gec-ml",
@@ -24,10 +30,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "CodeDig - Semantic Code Search Engine",
     description:
-      "Built semantic code search engine that understands code context and functionality. Features include:\n\n" +
-      "* Used ChatGLM API to generate semantic descriptions of code segments, enabling natural language queries\n" +
-      "* Indexed code segments using whoosh library\n" +
-      "* Developoed demo app using Flask \n",
+      "* Built a semantic code search engine using ChatGLM API, whoosh library, and Flask.",
     technologies: ["Python", "LLM", "flask", "Document indexing"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/code_search.png",
@@ -36,7 +39,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "Distributed Database Management System",
     description:
-      "Design and implementation of Distributed database system.",
+      "* Design and implementation of Distributed database system.",
     technologies: ["Python", "MinIO", "MySQL", "Flask"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/ddbs.png",

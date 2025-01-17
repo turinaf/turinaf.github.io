@@ -23,7 +23,7 @@ export const aboutMe: AboutMe = {
   institution: "Tsinghua University",
   // Note that links work in the description
   description:
-  "I am a Master's student in Computer Science at <a href='https://www.tsinghua.edu.cn/en/'>Tsinghua University</a>, specializing in Speech Processing and Natural Language Processing. Currently, I am conducting research at the <a href='http://cslt.org'>Center for Speech and Language Technologies (CSLT)</a> under the supervision of <a href='https://scholar.google.com/citations?user=bzUAoWIAAAAJ&hl=en'>Prof. Dong Wang</a> and <a href='https://scholar.google.com/citations?user=H3MX_8IAAAAJ&hl=en'>Prof. Thomas Fang Zheng</a>. My research focuses on developing automatic speech recognition systems for the Oromo language, contributing to the advancement of low-resource language technologies. My research interests encompass automatic speech recognition, text-to-speech synthesis, and natural language processing.",
+  "I am a Master's student in Computer Science at <a href='https://www.tsinghua.edu.cn/en/'>Tsinghua University</a>, specializing in Speech Recognition. Currently, I am conducting research at the <a href='http://cslt.org'>Center for Speech and Language Technologies (CSLT)</a> under the supervision of <a href='https://scholar.google.com/citations?user=bzUAoWIAAAAJ&hl=en'>Prof. Dong Wang</a> and <a href='https://scholar.google.com/citations?user=H3MX_8IAAAAJ&hl=en'>Prof. Thomas Fang Zheng</a>. My research focuses on developing automatic speech recognition systems for the Oromo language, contributing to the advancement of low-resource language technologies. My research interests include ASR, TTS, and NLP.",
 
   email: "turiabu548@outlook.com",
   imageUrl: "/images/undergrad.jpg",

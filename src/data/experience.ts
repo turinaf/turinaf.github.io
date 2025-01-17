@@ -28,7 +28,7 @@ export const experienceData: Experience[] = [
     company: "HCYtech",
     description: 
     "Joined AI Department of the company. Key responsibilities included:\n" +
-    "* Develope smoking detection system using computer vision, from surveillance camera feeds\n" +
+    "* Developed smoking detection system using computer vision, from surveillance camera feeds\n" +
     "* Developed custom chatbot using OpenAI API.\n" +
     "* Deployed speech-to-text service using the Whisper model.",
     // manager: "",
