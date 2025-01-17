@@ -25,7 +25,7 @@ export const portfolioData: Portfolio[] = [
     technologies: ["Docker", "Ollama", "Flask", "RAG"],
     // projectUrl: "https://project-demo.com",
     imageUrl: "/images/rag.png",
-    codeUrl: "https://github.com/turinaf/sagalee",
+    codeUrl: "https://github.com/turinaf/rag_ollama",
   },
   {
     title: "Finetuning LLM for Grammatical Error Correction (GEC)",
