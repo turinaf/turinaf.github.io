@@ -23,6 +23,6 @@ export const newsData: News[] = [
     date: "December 6, 2022",
     title: "Three International Students Awarded the Title: 2022 Excellent International Students of UESTC",
     description: "Recipient of the 2022 Excellent International Students of UESTC award", 
-    link: "https://news.uestc.edu.cn/?n=UestcNews.Front.DocumentV2.ArticlePage&Id=89836",
+    link: "https://en.uestc.edu.cn/info/1071/3950.htm",
   }
 ];
