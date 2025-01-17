@@ -38,7 +38,7 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2023",
-    conference: "Direct Research Journal of Public Health and Environmental Technology",
+    conference: "Journal of Public Health and Environmental Technology",
     title: "Attention-Based End-to-End Hybrid Ensemble Model for Breast Cancer Multi-Classification",
     authors: "CC Ukwuoma, D Cai, ES gATI, VK Agbesi, G Deribachew, LY Bayisa, and Turi Abu",
     paperUrl: "https://directresearchpublisher.org/drjphet/abstract/attention-based-end-to-end-hybrid-ensemble-model-for-breast-cancer-multi-classification/",
