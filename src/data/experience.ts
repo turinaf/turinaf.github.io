@@ -10,26 +10,40 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
-    date: "January 2024-present",
-    title: "Research Assitant",
+    date: "2026-present",
+    title: "PhD Researcher",
     company: "CSLT, Tsinghua University",
     description:
-      "Working on Automatic Speech Recognition for Oromo Language.\n\n"+
-      "* Developed data collection mobile app.\n"+
-      "* Created 100 hours of read speech dataset.\n"+
-      "* Published experiment result and open sourced the dataset.\n"+
-      "* Exploring different techniques to improve the ASR results, inluding Language modeling and finetuning strategies.",
-    advisor: "Prof Dong Wang, Prof Thomas Fang Zheng",
+      "Working on Visual Speech Recognition at CSLT.\n\n" +
+      "* Conducting PhD research in speech and language technologies.\n" +
+      "* Exploring multimodal approaches for robust speech understanding.",
+    advisor: "Prof. Dong Wang, Prof. Thomas Fang Zheng",
     companyUrl: "http://cslt.org/",
+  },
+  {
+    date: "Present",
+    title: "Building",
+    company: "HayuLabs",
+    description:
+      "Building hayulabs.com, speech AI and AI-assisted text editor for low resource langauges",
+    companyUrl: "https://hayulabs.com/",
+  },
+  {
+    date: "Previously",
+    title: "Founding Engineer",
+    company: "Qilingo",
+    description:
+      "Founding engineer at Qilingo, worked GoAssistant customized assistant with LLM tool use.",
+    companyUrl: "https://cheelin.ai/",
   },
   {
     date: "October 2022 - March 2023",
     title: "Intern-AI Engineer",
     company: "HCYtech",
     description: 
-    "Joined AI Department of the company. Key responsibilities included:\n" +
-    "* Developed smoking detection system using YOLO, from surveillance camera feeds.\n" +
-    "* Developed custom chatbot using OpenAI API and Speech-to-text using whisper model.\n",
+    "Joined the AI department. Key responsibilities included:\n" +
+    "* Developed a smoking detection system using YOLO from surveillance camera feeds.\n" +
+    "* Built a custom chatbot with the OpenAI API and speech-to-text using Whisper.\n",
     // manager: "",
     companyUrl: "https://www.hcytech.net/",
   },

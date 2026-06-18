@@ -4,6 +4,7 @@ export interface AboutMe {
   institution: string;
   description: string;
   email: string;
+  lastUpdated?: string;
   imageUrl?: string;
   blogUrl?: string;
   cvUrl?: string;
@@ -19,13 +20,14 @@ export interface AboutMe {
 
 export const aboutMe: AboutMe = {
   name: "Turi Abu",
-  title: "Graduate CS student",
+  title: "PhD Student in Computer Science",
   institution: "Tsinghua University",
   // Note that links work in the description
   description:
-  "I am a Master's student in Computer Science at <a href='https://www.tsinghua.edu.cn/en/'>Tsinghua University</a>, specializing in Speech Recognition. Currently, I am conducting research at the <a href='http://cslt.org'>Center for Speech and Language Technologies (CSLT)</a> under the supervision of <a href='https://scholar.google.com/citations?user=bzUAoWIAAAAJ&hl=en'>Prof. Dong Wang</a> and <a href='https://scholar.google.com/citations?user=H3MX_8IAAAAJ&hl=en'>Prof. Thomas Fang Zheng</a>. My research focuses on developing automatic speech recognition systems for the Oromo language, contributing to the advancement of low-resource language technologies. My research interests include ASR, TTS, and NLP.",
+  "I recently started my PhD in Computer Science at <a href='https://www.tsinghua.edu.cn/en/'>Tsinghua University</a>. I am conducting research at the <a href='http://cslt.org'>Center for Speech and Language Technologies (CSLT)</a> under the supervision of <a href='https://scholar.google.com/citations?user=H3MX_8IAAAAJ&hl=en'>Prof. Thomas Fang Zheng</a>. My current work focuses on Visual Speech Recognition, and my broader interests span speech and language technologies, including ASR, multimodal speech understanding, and NLP.",
 
   email: "turiabu548@outlook.com",
+  lastUpdated: "June 18, 2026",
   imageUrl: "/images/undergrad.jpg",
   googleScholarUrl: "https://scholar.google.com/citations?user=KlqWypQAAAAJ&hl=en",
   githubUsername: "turinaf",
