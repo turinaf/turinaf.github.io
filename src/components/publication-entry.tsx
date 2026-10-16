@@ -67,7 +67,7 @@ export function PublicationEntry({
               alt={publication.title}
               width={220}
               height={165}
-              className="h-32 w-full rounded-xl border border-zinc-200 object-cover dark:border-zinc-800 sm:w-44"
+              className="h-32 w-full rounded-xl border border-zinc-200 object-contain dark:border-zinc-800 sm:w-44"
             />
           </div>
         )}
