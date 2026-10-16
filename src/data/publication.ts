@@ -14,6 +14,16 @@ export interface Publication {
 export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
   {
+    year: "2026",
+    conference: "APSIPA Transactions on Signal and Information Processing",
+    title:
+      "A Framework for Identity Verification Based on Fusion of Voice and Face With Incomplete Information",
+    authors:
+      "Juntao Wang, Xiaolong Wu, Mingxing Xu, Turi Abu, Askar Hamdulla, and Thomas Fang Zheng",
+    // if you have an image in public/images, you can use it like this:
+    // imageUrl: "/images/publication-image.jpg"
+  },
+  {
     year: "2025",
     conference: "ICASSP",
     title: "Sagalee: An Open Source Automatic Speech Recognitioin Dataset for Oromo language",
