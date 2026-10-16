@@ -1,11 +1,10 @@
 import Image from "next/image";
 import {
   Github,
+  GraduationCap,
   Linkedin,
   Mail,
   Twitter,
-  ArrowUpRight,
-  GraduationCap,
 } from "lucide-react";
 import { AboutMe } from "@/data/aboutme";
 
@@ -13,44 +12,41 @@ interface ProfileSectionProps {
   aboutMe: AboutMe;
 }
 
+const socialIconClass =
+  "inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent dark:border-zinc-800 dark:text-zinc-400";
+
 export function ProfileSection({ aboutMe }: ProfileSectionProps) {
   if (!aboutMe) {
     return null;
   }
 
   return (
-    <div className="md:sticky top-12 flex flex-row-reverse md:flex-col gap-4 md:space-y-8">
-      {aboutMe.imageUrl && (
-        <div className="w-1/3 md:w-full flex-shrink-0">
-          <div className="relative max-h-[45vh] md:w-[65%] aspect-[3/4]">
-            <Image
-              src={aboutMe.imageUrl}
-              alt={aboutMe.name}
-              fill
-              priority
-              className="object-cover rounded-xl"
-            />
-          </div>
-        </div>
-      )}
-      <div className="w-2/3 md:w-full">
-        <h1 className="font-serif text-3xl font-light tracking-wide mb-3">
+    <div className="grid items-center gap-10 lg:grid-cols-[1fr_300px]">
+      <div>
+        <p
+          className="animate-fade-up font-mono text-sm text-accent"
+          style={{ animationDelay: "0ms" }}
+        >
+          Hi, I&apos;m
+        </p>
+        <h1
+          className="animate-fade-up mt-2 text-4xl font-semibold tracking-tight sm:text-5xl"
+          style={{ animationDelay: "80ms" }}
+        >
           {aboutMe.name}
         </h1>
-        {aboutMe.altName && (
-          <p className="text-zinc-600 text-md leading-relaxed tracking-wide mb-6">
-            {aboutMe.altName}
-          </p>
-        )}
-        <p className="text-zinc-600 text-xs leading-relaxed tracking-wide uppercase mb-6">
+        <p
+          className="animate-fade-up mt-3 text-lg text-zinc-600 dark:text-zinc-400"
+          style={{ animationDelay: "160ms" }}
+        >
           {aboutMe.title}
-          <br />
+          {" · "}
           {aboutMe.institutionUrl ? (
             <a
               href={aboutMe.institutionUrl}
-              className="hover:text-zinc-900 transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
+              className="transition-colors hover:text-accent"
             >
               {aboutMe.institution}
             </a>
@@ -58,103 +54,104 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
             aboutMe.institution
           )}
         </p>
-        <div className="flex gap-6 mb-6">
-          {aboutMe.blogUrl && (
+
+        {aboutMe.description && (
+          <div
+            className="bio animate-fade-up mt-5 max-w-xl text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300"
+            style={{ animationDelay: "240ms" }}
+            dangerouslySetInnerHTML={{ __html: aboutMe.description }}
+          />
+        )}
+
+        <div
+          className="animate-fade-up mt-7 flex gap-2.5"
+          style={{ animationDelay: "320ms" }}
+        >
+          {aboutMe.googleScholarUrl && (
             <a
-              href={aboutMe.blogUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
+              href={aboutMe.googleScholarUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              className={socialIconClass}
             >
-              <ArrowUpRight
-                size={12}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-              />
-              <span className="tracking-wider uppercase">Blog</span>
+              <GraduationCap className="h-4 w-4" />
             </a>
           )}
+          {aboutMe.githubUsername && (
+            <a
+              href={`https://github.com/${aboutMe.githubUsername}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className={socialIconClass}
+            >
+              <Github className="h-4 w-4" />
+            </a>
+          )}
+          {aboutMe.linkedinUsername && (
+            <a
+              href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className={socialIconClass}
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+          )}
+          {aboutMe.twitterUsername && (
+            <a
+              href={`https://twitter.com/${aboutMe.twitterUsername}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter / X"
+              className={socialIconClass}
+            >
+              <Twitter className="h-4 w-4" />
+            </a>
+          )}
+          <a
+            href={`mailto:${aboutMe.email}`}
+            aria-label="Email"
+            className={socialIconClass}
+          >
+            <Mail className="h-4 w-4" />
+          </a>
           {aboutMe.cvUrl && (
             <a
               href={aboutMe.cvUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="CV"
+              className={socialIconClass}
             >
-              <ArrowUpRight
-                size={12}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-              />
-              <span className="tracking-wider uppercase">CV</span>
+              <span className="text-[10px] font-semibold tracking-wide">
+                CV
+              </span>
             </a>
           )}
         </div>
-        <div className="space-y-2">
-          <a
-            href={`mailto:${aboutMe.email}`}
-            className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Mail size={14} />
-            {aboutMe.email}
-          </a>
-          {aboutMe.googleScholarUrl && (
-            <>
-              <br />
-              <a
-                href={aboutMe.googleScholarUrl}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GraduationCap size={14} />
-                Google Scholar
-              </a>
-            </>
-          )}
-          {aboutMe.twitterUsername && (
-            <>
-              <br />
-              <a
-                href={`https://twitter.com/${aboutMe.twitterUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter size={14} />@{aboutMe.twitterUsername}
-              </a>
-            </>
-          )}
-          {aboutMe.githubUsername && (
-            <>
-              <br />
-              <a
-                href={`https://github.com/${aboutMe.githubUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github size={14} />
-                github.com/{aboutMe.githubUsername}
-              </a>
-            </>
-          )}
-          {aboutMe.linkedinUsername && (
-            <>
-              <br />
-              <a
-                href={`https://www.linkedin.com/in/${aboutMe.linkedinUsername}`}
-                className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin size={14} />
-                linkedin.com/in/{aboutMe.linkedinUsername}
-              </a>
-            </>
-          )}
-        </div>
       </div>
+
+      {aboutMe.imageUrl && (
+        <div
+          className="animate-fade-up relative mx-auto w-60 sm:w-72 lg:w-full lg:max-w-[300px]"
+          style={{ animationDelay: "240ms" }}
+        >
+          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-zinc-400/30 via-zinc-300/25 to-zinc-400/15 blur-2xl dark:from-zinc-500/20 dark:via-zinc-600/10 dark:to-zinc-500/15" />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-zinc-200 shadow-xl dark:border-zinc-800">
+            <Image
+              src={aboutMe.imageUrl}
+              alt={aboutMe.name}
+              fill
+              priority
+              sizes="300px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

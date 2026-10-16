@@ -3,38 +3,113 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-rgb: 252 252 250;
+  --foreground-rgb: 39 39 42;
+  --accent-rgb: 24 24 27; /* zinc-900 — monochrome accent */
+  color-scheme: light;
+}
+
+.dark {
+  --background-rgb: 10 10 11;
+  --foreground-rgb: 228 228 231;
+  --accent-rgb: 228 228 231; /* zinc-200 */
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--source-serif-font), Georgia, serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Elements marked with serif class or font-serif will use Source Serif */
+/* Anchored sections clear the sticky nav when scrolled to */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background: rgb(var(--accent-rgb) / 0.2);
+}
+
+/* Serif accents (name, pull quotes) */
 .font-serif,
 .serif {
-  font-family: ui-serif, var(--font-pt-serif), var(--font-noto-serif), Georgia,
-    serif;
+  font-family: var(--font-pt-serif), Georgia, serif;
 }
 
-/* Elements marked with sans or font-sans will use Geist */
-.font-sans,
-.sans {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+/* Bio / description rich text */
+.bio a {
+  color: rgb(var(--accent-rgb));
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(var(--accent-rgb) / 0.35);
+  transition: border-color 0.2s ease;
+}
+.bio a:hover {
+  border-bottom-color: rgb(var(--accent-rgb));
+}
+
+/* Markdown rendered content */
+.markdown-content a {
+  color: rgb(var(--accent-rgb));
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(var(--accent-rgb) / 0.35);
+  transition: border-color 0.2s ease;
+}
+.markdown-content a:hover {
+  border-bottom-color: rgb(var(--accent-rgb));
 }
 .markdown-content ul {
   list-style-type: disc;
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
   margin-top: 0.5rem;
 }
-
 .markdown-content li {
   margin-bottom: 0.25rem;
 }
-
 .markdown-content p {
   margin-bottom: 0.75rem;
+}
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Subtle scrollbar (WebKit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(113 113 122 / 0.35);
+  border-radius: 8px;
+  border: 2px solid rgb(var(--background-rgb));
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }

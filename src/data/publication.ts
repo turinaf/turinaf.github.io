@@ -14,11 +14,21 @@ export interface Publication {
 export const publicationData: Publication[] = [
   // If you don't want to show publications, just make the array empty.
   {
+    year: "2026",
+    conference: "APSIPA Transactions on Signal and Information Processing",
+    title:
+      "A Framework for Identity Verification Based on Fusion of Voice and Face With Incomplete Information",
+    authors:
+      "Juntao Wang, Xiaolong Wu, Mingxing Xu, Turi Abu, Askar Hamdulla, and Thomas Fang Zheng",
+    imageUrl: "/images/framework.png",
+  },
+  {
     year: "2025",
-    conference: "ICASSP",
+    conference:
+      "IEEE International Conference on Acoustics, Speech and Signal Processing",
     title: "Sagalee: An Open Source Automatic Speech Recognitioin Dataset for Oromo language",
     authors: "Turi Abu, Shi Ying, Thomas Fang Zheng, Dong Wang",
-    paperUrl: "https://github.com/turinaf/sagalee",
+    paperUrl: "https://ieeexplore.ieee.org/document/10890761",
     codeUrl: "https://github.com/turinaf/sagalee",
     //bibtex: "https://arxiv.org/abs/2409.15476.bib",
     // tldr: "Created speech dataset for Oromo language and established baseline models",
@@ -34,7 +44,7 @@ export const publicationData: Publication[] = [
     authors: "LY Bayisa, W Wang, Q Wang, CC Ukwuoma, Gutem HK, Endris A and Turi Abu",
     paperUrl: "https://link.springer.com/article/10.1007/s13042-024-02177-5",
     // codeUrl: "",
-    // imageUrl: ""
+    imageUrl: "/images/unified-dl.png",
   },
   {
     year: "2023",
@@ -43,6 +53,6 @@ export const publicationData: Publication[] = [
     authors: "CC Ukwuoma, D Cai, ES gATI, VK Agbesi, G Deribachew, LY Bayisa, and Turi Abu",
     paperUrl: "https://directresearchpublisher.org/drjphet/abstract/attention-based-end-to-end-hybrid-ensemble-model-for-breast-cancer-multi-classification/",
     // codeUrl: "",
-    // imageUrl: ""
+    imageUrl: "/images/ensemble.png",
   },
 ];

@@ -1,6 +1,7 @@
 export interface Education {
   year: string;
   institution: string;
+  institutionUrl?: string;
   degree: string;
   advisor?: string;
   thesis?: string;
@@ -13,7 +14,8 @@ export const educationData: Education[] = [
     year: "2025—Present",
     institution: "Tsinghua University",
     degree: "PhD in Computer Science",
-    // advisor: "Prof. Thomas Fang Zheng, Prof Dong Wang",
+    advisor:
+      "Prof. Thomas Fang Zheng (Tsinghua University) & Cheng Feng (Siemens Company)",
   },
   {
     year: "2023—2025",

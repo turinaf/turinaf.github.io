@@ -1,45 +1,50 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { Code2, ExternalLink } from "lucide-react";
 import { Portfolio } from "@/data/portfolio";
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown";
+
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/40">
       {portfolio.imageUrl && (
-        <div className="w-1/4 min-w-[160px] relative">
+        <div className="relative aspect-[16/10] border-b border-zinc-100 dark:border-zinc-800/60">
           <Image
             src={portfolio.imageUrl}
             alt={portfolio.title}
-            width={160}
-            height={200}
-            className="rounded-lg"
+            fill
+            sizes="(max-width: 640px) 100vw, 480px"
+            className="object-contain"
           />
         </div>
       )}
-      <div className="flex flex-col flex-1">
-        <h3 className="font-serif text-md mb-3">
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="font-semibold leading-snug">
           {portfolio.projectUrl ? (
             <a
               href={portfolio.projectUrl}
-              className="group inline-flex items-center gap-2 hover:text-zinc-600 transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-accent"
             >
               {portfolio.title}
-              <ArrowUpRight
-                size={16}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-              />
             </a>
           ) : (
             portfolio.title
           )}
         </h3>
 
+        {portfolio.description && (
+          <div className="markdown-content mt-2 flex-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+            <ReactMarkdown>{portfolio.description}</ReactMarkdown>
+          </div>
+        )}
+
         {portfolio.technologies && (
-          <div className="flex gap-2 mb-4 flex-wrap">
+          <div className="mt-4 flex flex-wrap gap-1.5">
             {portfolio.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="text-xs text-zinc-600 px-2 py-1 bg-zinc-100 rounded-full"
+                className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800/70 dark:text-zinc-400"
               >
                 {tech}
               </span>
@@ -47,36 +52,33 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
           </div>
         )}
 
-        <div className="flex gap-6">
-          {portfolio.projectUrl && (
-            <a
-              href={portfolio.projectUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
-            >
-              <ArrowUpRight
-                size={12}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-              />
-              <span className="tracking-wider uppercase">Project</span>
-            </a>
-          )}
-          {portfolio.codeUrl && (
-            <a
-              href={portfolio.codeUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300"
-            >
-              <ArrowUpRight
-                size={12}
-                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-              />
-              <span className="tracking-wider uppercase">Code</span>
-            </a>
-          )}
-        </div>
-        <div className="text-sm text-zinc-600  mb-4 mt-4 italic markdown-content">
-          <ReactMarkdown>{portfolio.description}</ReactMarkdown>
-        </div>
+        {(portfolio.projectUrl || portfolio.codeUrl) && (
+          <div className="mt-4 flex gap-4 border-t border-zinc-100 pt-4 dark:border-zinc-800">
+            {portfolio.projectUrl && (
+              <a
+                href={portfolio.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 transition-colors hover:text-accent dark:text-zinc-400"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                Project
+              </a>
+            )}
+            {portfolio.codeUrl && (
+              <a
+                href={portfolio.codeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 transition-colors hover:text-accent dark:text-zinc-400"
+              >
+                <Code2 className="h-3.5 w-3.5" />
+                Code
+              </a>
+            )}
+          </div>
+        )}
       </div>
-    </div>
+    </article>
   );
 }
