@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  FileText,
   Github,
   GraduationCap,
   Linkedin,
@@ -127,7 +126,9 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
               aria-label="CV"
               className={socialIconClass}
             >
-              <FileText className="h-4 w-4" />
+              <span className="text-[10px] font-semibold tracking-wide">
+                CV
+              </span>
             </a>
           )}
         </div>
