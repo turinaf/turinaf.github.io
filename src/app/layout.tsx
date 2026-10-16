@@ -35,9 +35,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://turinaf.github.io"),
   title: customMetadata.title || aboutMe.name,
   description: plainDescription,
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
     title: customMetadata.title || aboutMe.name,
     description: plainDescription,
