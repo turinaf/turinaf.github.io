@@ -65,32 +65,8 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
         )}
 
         <div
-          className="animate-fade-up mt-7 flex flex-wrap gap-3"
+          className="animate-fade-up mt-7 flex gap-2.5"
           style={{ animationDelay: "320ms" }}
-        >
-          <a
-            href={`mailto:${aboutMe.email}`}
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 dark:text-zinc-900"
-          >
-            <Mail className="h-4 w-4" />
-            Get in touch
-          </a>
-          {aboutMe.cvUrl && (
-            <a
-              href={aboutMe.cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent dark:border-zinc-700"
-            >
-              <FileText className="h-4 w-4" />
-              Download CV
-            </a>
-          )}
-        </div>
-
-        <div
-          className="animate-fade-up mt-6 flex gap-2.5"
-          style={{ animationDelay: "400ms" }}
         >
           {aboutMe.googleScholarUrl && (
             <a
@@ -143,6 +119,17 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
           >
             <Mail className="h-4 w-4" />
           </a>
+          {aboutMe.cvUrl && (
+            <a
+              href={aboutMe.cvUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CV"
+              className={socialIconClass}
+            >
+              <FileText className="h-4 w-4" />
+            </a>
+          )}
         </div>
       </div>
 

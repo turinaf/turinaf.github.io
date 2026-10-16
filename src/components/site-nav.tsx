@@ -1,4 +1,3 @@
-import { FileText } from "lucide-react";
 import { aboutMe } from "@/data/aboutme";
 import { sectionOrder, Section } from "@/data/section-order";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -38,18 +37,6 @@ export function SiteNav() {
               );
             })}
           </div>
-
-          {aboutMe.cvUrl && (
-            <a
-              href={aboutMe.cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-700 transition-colors hover:border-accent hover:text-accent dark:border-zinc-800 dark:text-zinc-300"
-            >
-              <FileText className="h-3.5 w-3.5" />
-              CV
-            </a>
-          )}
 
           <ThemeToggle />
         </div>
