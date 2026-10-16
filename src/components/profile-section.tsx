@@ -22,7 +22,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
 
   return (
     <div className="grid items-center gap-10 lg:grid-cols-[1fr_300px]">
-      <div>
+      <div className="order-2 lg:order-1">
         <p
           className="animate-fade-up font-mono text-sm text-accent"
           style={{ animationDelay: "0ms" }}
@@ -136,7 +136,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
 
       {aboutMe.imageUrl && (
         <div
-          className="animate-fade-up relative mx-auto w-60 sm:w-72 lg:w-full lg:max-w-[300px]"
+          className="animate-fade-up relative order-1 mx-auto w-60 sm:w-72 lg:order-2 lg:w-full lg:max-w-[300px]"
           style={{ animationDelay: "240ms" }}
         >
           <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-zinc-400/30 via-zinc-300/25 to-zinc-400/15 blur-2xl dark:from-zinc-500/20 dark:via-zinc-600/10 dark:to-zinc-500/15" />
