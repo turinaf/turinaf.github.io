@@ -1,6 +1,7 @@
 export interface Education {
   year: string;
   institution: string;
+  institutionUrl?: string;
   degree: string;
   advisor?: string;
   thesis?: string;
