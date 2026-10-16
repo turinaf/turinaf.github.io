@@ -77,32 +77,9 @@ export default function RootLayout({
         <SiteNav />
         <main>{children}</main>
         <footer className="border-t border-zinc-200/70 dark:border-zinc-800/70">
-          <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-10 sm:flex-row sm:items-center sm:justify-between md:px-8">
-            <div>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                © {new Date().getFullYear()} {aboutMe.name}
-              </p>
-              {aboutMe.lastUpdated && (
-                <p className="mt-1 text-xs text-zinc-500">
-                  Last updated: {aboutMe.lastUpdated}
-                </p>
-              )}
-              {aboutMe.secretDescription && (
-                <p className="mt-1 text-xs text-zinc-500">
-                  {aboutMe.secretDescription}
-                </p>
-              )}
-            </div>
-            <p className="text-xs text-zinc-500">
-              Built with{" "}
-              <a
-                href="https://github.com/tovacinni/research-website-template"
-                className="underline underline-offset-2 transition-colors hover:text-accent"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                research-website-template
-              </a>
+          <div className="mx-auto max-w-5xl px-6 py-10 md:px-8">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              © {new Date().getFullYear()} {aboutMe.name}
             </p>
           </div>
         </footer>

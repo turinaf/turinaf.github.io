@@ -20,8 +20,7 @@ export const publicationData: Publication[] = [
       "A Framework for Identity Verification Based on Fusion of Voice and Face With Incomplete Information",
     authors:
       "Juntao Wang, Xiaolong Wu, Mingxing Xu, Turi Abu, Askar Hamdulla, and Thomas Fang Zheng",
-    // if you have an image in public/images, you can use it like this:
-    // imageUrl: "/images/publication-image.jpg"
+    imageUrl: "/images/framework.png",
   },
   {
     year: "2025",
@@ -44,7 +43,7 @@ export const publicationData: Publication[] = [
     authors: "LY Bayisa, W Wang, Q Wang, CC Ukwuoma, Gutem HK, Endris A and Turi Abu",
     paperUrl: "https://link.springer.com/article/10.1007/s13042-024-02177-5",
     // codeUrl: "",
-    // imageUrl: ""
+    imageUrl: "/images/unified-dl.png",
   },
   {
     year: "2023",
@@ -53,6 +52,6 @@ export const publicationData: Publication[] = [
     authors: "CC Ukwuoma, D Cai, ES gATI, VK Agbesi, G Deribachew, LY Bayisa, and Turi Abu",
     paperUrl: "https://directresearchpublisher.org/drjphet/abstract/attention-based-end-to-end-hybrid-ensemble-model-for-breast-cancer-multi-classification/",
     // codeUrl: "",
-    // imageUrl: ""
+    imageUrl: "/images/ensemble.png",
   },
 ];
