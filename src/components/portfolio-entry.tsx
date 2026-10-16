@@ -5,15 +5,15 @@ import ReactMarkdown from "react-markdown";
 
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl hover:shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-900/40 dark:hover:border-accent/30 dark:hover:shadow-black/40">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/40">
       {portfolio.imageUrl && (
-        <div className="relative aspect-[16/10] overflow-hidden border-b border-zinc-100 dark:border-zinc-800/60">
+        <div className="relative aspect-[16/10] border-b border-zinc-100 dark:border-zinc-800/60">
           <Image
             src={portfolio.imageUrl}
             alt={portfolio.title}
             fill
             sizes="(max-width: 640px) 100vw, 480px"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-contain"
           />
         </div>
       )}

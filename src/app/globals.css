@@ -55,6 +55,16 @@ section[id] {
 }
 
 /* Markdown rendered content */
+.markdown-content a {
+  color: rgb(var(--accent-rgb));
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(var(--accent-rgb) / 0.35);
+  transition: border-color 0.2s ease;
+}
+.markdown-content a:hover {
+  border-bottom-color: rgb(var(--accent-rgb));
+}
 .markdown-content ul {
   list-style-type: disc;
   margin-left: 1.25rem;

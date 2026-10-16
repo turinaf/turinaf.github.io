@@ -12,9 +12,10 @@ export const experienceData: Experience[] = [
   {
     date: "June 2026 - August 2026",
     title: "Intern AI Engineer",
-    company: "Zhipu AI",
+    company: "Z.ai",
+    companyUrl: "https://z.ai",
     description:
-      "Worked on AutoClaw and Zwork, AI agent harnesses that can complete long horizon tasks helping people complete their work.",
+      "Worked on [AutoClaw](https://autoclaw.z.ai/) and Zwork, AI agent harnesses that can complete long horizon tasks helping people complete their work.",
   },
   {
     date: "September 2025 - Present",
