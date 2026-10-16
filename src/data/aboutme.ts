@@ -27,7 +27,7 @@ export const aboutMe: AboutMe = {
   "I recently started my PhD in Computer Science at <a href='https://www.tsinghua.edu.cn/en/'>Tsinghua University</a>. I am conducting research at the <a href='http://cslt.org'>Center for Speech and Language Technologies (CSLT)</a>, co-supervised by <a href='https://scholar.google.com/citations?user=H3MX_8IAAAAJ&hl=en'>Prof. Thomas Fang Zheng</a> (Tsinghua University) and <a href='https://scholar.google.com/citations?user=A0SOBBQAAAAJ&hl=en'>Cheng Feng</a> (Siemens Company). My current work focuses on Visual Speech Recognition, and my broader interests span speech and language technologies, including ASR, multimodal speech understanding, and NLP.",
 
   email: "turiabu548@outlook.com",
-  imageUrl: "/images/me1.jpg",
+  imageUrl: "/images/me2.jpg",
   googleScholarUrl: "https://scholar.google.com/citations?user=KlqWypQAAAAJ&hl=en",
   githubUsername: "turinaf",
   linkedinUsername: "turi-abu",

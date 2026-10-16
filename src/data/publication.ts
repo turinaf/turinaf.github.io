@@ -24,10 +24,11 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2025",
-    conference: "ICASSP",
+    conference:
+      "IEEE International Conference on Acoustics, Speech and Signal Processing",
     title: "Sagalee: An Open Source Automatic Speech Recognitioin Dataset for Oromo language",
     authors: "Turi Abu, Shi Ying, Thomas Fang Zheng, Dong Wang",
-    paperUrl: "https://github.com/turinaf/sagalee",
+    paperUrl: "https://ieeexplore.ieee.org/document/10890761",
     codeUrl: "https://github.com/turinaf/sagalee",
     //bibtex: "https://arxiv.org/abs/2409.15476.bib",
     // tldr: "Created speech dataset for Oromo language and established baseline models",

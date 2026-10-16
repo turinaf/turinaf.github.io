@@ -151,7 +151,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
           className="animate-fade-up relative mx-auto w-60 sm:w-72 lg:w-full lg:max-w-[300px]"
           style={{ animationDelay: "240ms" }}
         >
-          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-accent/25 via-fuchsia-300/25 to-amber-200/40 blur-2xl dark:from-accent/15 dark:via-fuchsia-500/10 dark:to-amber-500/10" />
+          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-zinc-400/30 via-zinc-300/25 to-zinc-400/15 blur-2xl dark:from-zinc-500/20 dark:via-zinc-600/10 dark:to-zinc-500/15" />
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-zinc-200 shadow-xl dark:border-zinc-800">
             <Image
               src={aboutMe.imageUrl}

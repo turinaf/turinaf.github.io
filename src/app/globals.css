@@ -5,14 +5,14 @@
 :root {
   --background-rgb: 252 252 250;
   --foreground-rgb: 39 39 42;
-  --accent-rgb: 79 70 229; /* indigo-600 */
+  --accent-rgb: 24 24 27; /* zinc-900 — monochrome accent */
   color-scheme: light;
 }
 
 .dark {
   --background-rgb: 10 10 11;
   --foreground-rgb: 228 228 231;
-  --accent-rgb: 165 180 252; /* indigo-300 */
+  --accent-rgb: 228 228 231; /* zinc-200 */
   color-scheme: dark;
 }
 

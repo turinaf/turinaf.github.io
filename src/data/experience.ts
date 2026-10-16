@@ -10,41 +10,29 @@ export interface Experience {
 
 export const experienceData: Experience[] = [
   {
-    date: "2026-present",
-    title: "PhD Researcher",
+    date: "June 2026 - August 2026",
+    title: "Intern AI Engineer",
+    company: "Zhipu AI",
+    description:
+      "Worked on AutoClaw and Zwork, AI agent harnesses that can complete long horizon tasks helping people complete their work.",
+  },
+  {
+    date: "September 2025 - Present",
+    title: "Research Assistant",
     company: "CSLT, Tsinghua University",
-    description:
-      "Working on Visual Speech Recognition at CSLT.\n\n" +
-      "* Conducting PhD research in speech and language technologies.\n" +
-      "* Exploring multimodal approaches for robust speech understanding.",
-    advisor: "Prof. Dong Wang, Prof. Thomas Fang Zheng",
+    advisor: "Prof. Thomas Fang Zheng",
     companyUrl: "http://cslt.org/",
-  },
-  {
-    date: "Present",
-    title: "Building",
-    company: "HayuLabs",
     description:
-      "Building hayulabs.com, speech AI and AI-assisted text editor for low resource langauges",
-    companyUrl: "https://hayulabs.com/",
-  },
-  {
-    date: "Previously",
-    title: "Founding Engineer",
-    company: "Qilingo",
-    description:
-      "Founding engineer at Qilingo, worked GoAssistant customized assistant with LLM tool use.",
-    companyUrl: "https://cheelin.ai/",
+      "Focus: Visual Speech Recognition, learning the relationship between lip movement and transcript.\n\n" +
+      "* Masters Work (December 2023 - June 2025): Speech recognition for low resource languages. Created a speech recognition dataset and open sourced it.",
   },
   {
     date: "October 2022 - March 2023",
     title: "Intern-AI Engineer",
-    company: "HCYtech",
-    description: 
-    "Joined the AI department. Key responsibilities included:\n" +
-    "* Developed a smoking detection system using YOLO from surveillance camera feeds.\n" +
-    "* Built a custom chatbot with the OpenAI API and speech-to-text using Whisper.\n",
-    // manager: "",
+    company: "Hongchengyun Technology Co., Ltd (HCYTech)",
+    description:
+      "* Smoke Detection: trained a cigarette smoking detection model using YOLO and built a smoking detection API.\n" +
+      "* Speech Recognition: built an API for speech recognition using the open source Whisper model.",
     companyUrl: "https://www.hcytech.net/",
   },
 ];
