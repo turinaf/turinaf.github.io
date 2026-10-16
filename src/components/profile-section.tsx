@@ -140,7 +140,7 @@ export function ProfileSection({ aboutMe }: ProfileSectionProps) {
           style={{ animationDelay: "240ms" }}
         >
           <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-zinc-400/30 via-zinc-300/25 to-zinc-400/15 blur-2xl dark:from-zinc-500/20 dark:via-zinc-600/10 dark:to-zinc-500/15" />
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-zinc-200 shadow-xl dark:border-zinc-800">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
             <Image
               src={aboutMe.imageUrl}
               alt={aboutMe.name}
