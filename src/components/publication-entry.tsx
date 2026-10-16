@@ -58,7 +58,7 @@ export function PublicationEntry({
   publication: Publication;
 }) {
   return (
-    <article className="group rounded-2xl border border-zinc-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-lg hover:shadow-zinc-200/60 dark:border-zinc-800 dark:bg-zinc-900/40 dark:hover:border-accent/30 dark:hover:shadow-black/40 sm:p-6">
+    <article className="group">
       <div className="flex flex-col gap-5 sm:flex-row">
         {publication.imageUrl && (
           <div className="shrink-0">

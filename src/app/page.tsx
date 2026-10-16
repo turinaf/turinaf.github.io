@@ -57,7 +57,7 @@ function renderSection(sectionName: Section) {
       );
     case Section.Publication:
       return (
-        <div className="space-y-5">
+        <div className="space-y-8">
           {publicationData.map((publication, index) => (
             <PublicationEntry key={index} publication={publication} />
           ))}
